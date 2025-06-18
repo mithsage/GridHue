@@ -32,12 +32,12 @@ class GridHue:
                 row_cells.append(cell)
             self.cells.append(row_cells)
 
-        # Color buttons
+        
         for i, color in enumerate(COLORS):
             btn = tk.Button(root, bg=color, width=4, command=lambda c=color: self.set_color(c))
             btn.grid(row=1, column=i)
 
-        # Clear button
+       
         clear_btn = tk.Button(root, text="Clear", command=self.clear)
         clear_btn.grid(row=1, column=len(COLORS))
 
@@ -56,7 +56,7 @@ class GridHue:
             for cell in row:
                 self.canvas.itemconfig(cell, fill="white")
 
-# Run the app
+
 if __name__ == "__main__":
     root = tk.Tk()
     app = GridHue(root)
